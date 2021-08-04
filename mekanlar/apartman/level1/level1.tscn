@@ -1,4 +1,4 @@
-[gd_scene load_steps=95 format=2]
+[gd_scene load_steps=96 format=2]
 
 [ext_resource path="res://textures/room-aurora/masaa_3.png" type="Texture" id=1]
 [ext_resource path="res://textures/room-aurora/gardolap.png" type="Texture" id=2]
@@ -60,6 +60,7 @@
 [ext_resource path="res://dialog/level1-aurora/Dialog-aurora.tscn" type="PackedScene" id=58]
 [ext_resource path="res://dialog/level1-mum-thanks/Dialog-thanks.tscn" type="PackedScene" id=59]
 [ext_resource path="res://dialog/dialog-auroraya-git/Dialog-auroraya-git.tscn" type="PackedScene" id=60]
+[ext_resource path="res://mekanlar/apartman/level1/dialog-aurorayagit.gd" type="Script" id=61]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 48, 48 )
@@ -677,7 +678,7 @@ texture = ExtResource( 41 )
 
 [node name="masaa" type="AnimatedSprite" parent="auroramasa"]
 frames = SubResource( 24 )
-frame = 1
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="auroramasa"]
@@ -766,19 +767,16 @@ margin_bottom = 1312.0
 
 [node name="dialog-aurorayagit" type="Area2D" parent="."]
 position = Vector2( 2016, 992 )
+script = ExtResource( 61 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="dialog-aurorayagit"]
-position = Vector2( -64, 0 )
+position = Vector2( -96, 0 )
 shape = SubResource( 15 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="dialog-aurorayagit"]
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="dialog-aurorayagit/StaticBody2D"]
-position = Vector2( -32, 32 )
-shape = SubResource( 15 )
 [connection signal="body_entered" from="room-nebula-cam" to="room-nebula-cam" method="_on_roomnebulacam_body_entered"]
-[connection signal="body_entered" from="nebula_kapi" to="Dialog-mumyok" method="_on_nebula_kapi_body_entered"]
 [connection signal="body_entered" from="nebula_kapi" to="nebula_kapi" method="_on_nebulakamera_body_entered"]
+[connection signal="body_entered" from="nebula_kapi" to="Dialog-mumyok" method="_on_nebula_kapi_body_entered"]
 [connection signal="body_exited" from="nebula_kapi" to="nebula_kapi" method="_on_nebulakamera_body_exited"]
 [connection signal="body_entered" from="koridor1-2" to="koridor1-2" method="_on_koridor12_body_entered"]
 [connection signal="body_exited" from="koridor1-2" to="koridor1-2" method="_on_koridor12_body_exited"]
@@ -789,8 +787,8 @@ shape = SubResource( 15 )
 [connection signal="body_entered" from="koridor2-1" to="koridor2-1" method="_on_koridor21_body_entered"]
 [connection signal="body_entered" from="koridor-merdivenTOkor" to="koridor-merdivenTOkor" method="_on_koridormerdivenTOkor_body_entered"]
 [connection signal="dialog_baslat" from="mum-sifonyer" to="Dialog-thanks" method="_on_mumsifonyer_dialog_baslat"]
-[connection signal="yoket" from="mum-sifonyer" to="Nebula-mum" method="_on_mumsifonyer_yoket"]
 [connection signal="yoket" from="mum-sifonyer" to="Nebula" method="_on_mumsifonyer_yoket"]
+[connection signal="yoket" from="mum-sifonyer" to="Nebula-mum" method="_on_mumsifonyer_yoket"]
 [connection signal="body_entered" from="level2" to="level2" method="_on_level2_body_entered"]
 [connection signal="body_entered" from="dialog-masa-bolge" to="Dialog-masa" method="_on_dialogmasabolge_body_entered"]
 [connection signal="body_entered" from="dialog-masa-bolge" to="Dialog-masa" method="_on_dialogmasa_body_entered"]
@@ -806,3 +804,4 @@ shape = SubResource( 15 )
 [connection signal="hareketlilik" from="Dialog-aurorayagit" to="Nebula" method="_on_Dialogaurorayagit_hareketlilik"]
 [connection signal="hareketsizlik" from="Dialog-aurorayagit" to="Nebula" method="_on_Dialogaurorayagit_hareketsizlik"]
 [connection signal="body_entered" from="dialog-aurorayagit" to="Dialog-aurorayagit" method="_on_dialogaurorayagit_body_entered"]
+[connection signal="body_entered" from="dialog-aurorayagit" to="dialog-aurorayagit" method="_on_dialogaurorayagit_body_entered"]

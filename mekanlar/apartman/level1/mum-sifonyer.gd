@@ -14,3 +14,4 @@ func _input(event):
 	if Input.is_key_pressed(KEY_E):
 		emit_signal("yoket")
 		emit_signal("dialog_baslat")
+		$"/root/CollisionShape2D4".disabled=true

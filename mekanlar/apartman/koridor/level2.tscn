@@ -259,7 +259,7 @@ polygon = PoolVector2Array( 2688, 1280, 2688, 1536 )
 extents = Vector2( 32, 512 )
 
 [node name="level2" type="Node2D"]
-modulate = Color( 0.67451, 0.658824, 0.658824, 1 )
+modulate = Color( 0.109804, 0.109804, 0.109804, 1 )
 
 [node name="zemin" type="TileMap" parent="."]
 tile_set = SubResource( 8 )
@@ -303,7 +303,7 @@ texture = ExtResource( 14 )
 position = Vector2( 1664, 1488 )
 scale = Vector2( 2.5, 3 )
 frames = SubResource( 9 )
-frame = 12
+frame = 4
 playing = true
 
 [node name="Light2D" type="Light2D" parent="gulizar"]
@@ -319,7 +319,7 @@ position = Vector2( 0, -5.33334 )
 shape = SubResource( 10 )
 
 [node name="Nebula-mum" parent="." instance=ExtResource( 7 )]
-position = Vector2( 2176, 1408 )
+position = Vector2( 32, 192 )
 
 [node name="duvarlar" type="TileMap" parent="."]
 tile_set = SubResource( 11 )

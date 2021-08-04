@@ -128,6 +128,7 @@ run/main_scene="res://mekanlar/apartman/level1/level1.tscn"
 [autoload]
 
 Main="*res://mekanlar/apartman/level1/main.gd"
+CollisionShape2D4="*res://mekanlar/apartman/level1/CollisionShape2D4.gd"
 
 [display]
 
