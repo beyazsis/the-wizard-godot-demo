@@ -1,0 +1,82 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://dialog/şablon/texture/govde.png" type="Texture" id=1]
+[ext_resource path="res://dialog/şablon/font/Cave-Story.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://dialog/şablon/texture/tus.png" type="Texture" id=3]
+[ext_resource path="res://dialog/şablon/DialogBox.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 37
+font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "tus"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( -0.1, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 879.511, 130 ), Vector2( 879.511, 120 ) ]
+}
+
+[node name="Dialog" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DialogBox" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -480.0
+margin_top = -216.0
+margin_right = 480.0
+margin_bottom = -56.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="DialogBox"]
+margin_right = 960.0
+margin_bottom = 160.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DialogBox"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 50.0
+margin_top = 20.0
+margin_right = -50.0
+margin_bottom = -20.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "testing dialog. This is a looooong dialog. Lest see."
+text = "testing dialog. This is a looooong dialog. Lest see."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tus" type="Sprite" parent="DialogBox"]
+visible = false
+position = Vector2( 879.511, 131.597 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DialogBox/tus"]
+autoplay = "tus"
+anims/tus = SubResource( 2 )
+
+[node name="Tween" type="Tween" parent="DialogBox"]
+[connection signal="tween_completed" from="DialogBox/Tween" to="DialogBox" method="_on_Tween_tween_completed"]

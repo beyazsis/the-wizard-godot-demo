@@ -1,0 +1,482 @@
+[gd_scene load_steps=45 format=2]
+
+[ext_resource path="res://textures/enterance1/duvaaricidik.png" type="Texture" id=1]
+[ext_resource path="res://textures/enterance1/duvar-birleşimli.png" type="Texture" id=2]
+[ext_resource path="res://textures/enterance1/duvar.png" type="Texture" id=3]
+[ext_resource path="res://textures/enterance1/duvaarici.png" type="Texture" id=4]
+[ext_resource path="res://textures/enterance1/duvaaricikare.png" type="Texture" id=5]
+[ext_resource path="res://textures/enterance1/betonzemin.png" type="Texture" id=6]
+[ext_resource path="res://mekanlar/apartman/koridor/Nebula-mum-collsion-on.tscn" type="PackedScene" id=7]
+[ext_resource path="res://mekanlar/apartman/koridor/kam2-2.gd" type="Script" id=8]
+[ext_resource path="res://mekanlar/apartman/koridor/kam1-1.gd" type="Script" id=9]
+[ext_resource path="res://mekanlar/apartman/koridor/kam4-4.gd" type="Script" id=10]
+[ext_resource path="res://mekanlar/apartman/koridor/kam3-3.gd" type="Script" id=11]
+[ext_resource path="res://mekanlar/apartman/koridor/kam6-6.gd" type="Script" id=12]
+[ext_resource path="res://mekanlar/apartman/koridor/kam5-5.gd" type="Script" id=13]
+[ext_resource path="res://mekanlar/apartman/koridor/duvar lekesi.png" type="Texture" id=14]
+[ext_resource path="res://mekanlar/apartman/koridor/kan.png" type="Texture" id=15]
+[ext_resource path="res://mekanlar/apartman/koridor/kan3.png" type="Texture" id=16]
+[ext_resource path="res://mekanlar/apartman/koridor/kan2.png" type="Texture" id=17]
+[ext_resource path="res://textures/lights/candlelight.png" type="Texture" id=18]
+[ext_resource path="res://mekanlar/apartman/koridor/gulizar2.png" type="Texture" id=19]
+[ext_resource path="res://mekanlar/apartman/koridor/gulizar1.png" type="Texture" id=20]
+[ext_resource path="res://mekanlar/apartman/koridor/siluet.png" type="Texture" id=21]
+[ext_resource path="res://mekanlar/apartman/koridor/siluetani.gd" type="Script" id=22]
+[ext_resource path="res://mekanlar/apartman/koridor/siluet.gd" type="Script" id=23]
+[ext_resource path="res://dialog/level1-gulizar/Dialog-gulizar.tscn" type="PackedScene" id=24]
+[ext_resource path="res://mekanlar/apartman/koridor/kam7-7.gd" type="Script" id=25]
+
+[sub_resource type="OccluderPolygon2D" id=1]
+polygon = PoolVector2Array( 128, 32, 0, 32, 0, 0, 128, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 128, 32, 0, 32, 0, 0, 128, 0 )
+
+[sub_resource type="OccluderPolygon2D" id=3]
+polygon = PoolVector2Array( 32, 128, 0, 128, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 32, 128, 0, 128, 0, 0, 32, 0 )
+
+[sub_resource type="OccluderPolygon2D" id=5]
+polygon = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
+
+[sub_resource type="TileSet" id=8]
+0/name = "betonzemin.png 0"
+0/texture = ExtResource( 6 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 128, 128 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "duvaarici.png 1"
+1/texture = ExtResource( 4 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 128, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/occluder = SubResource( 1 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 2 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "duvaaricidik.png 2"
+2/texture = ExtResource( 1 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 32, 128 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/occluder = SubResource( 3 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 4 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+3/name = "duvaaricikare.png 3"
+3/texture = ExtResource( 5 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 128, 128 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/occluder = SubResource( 5 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "duvar-birleşimli.png 4"
+4/texture = ExtResource( 2 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 128, 128 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape = SubResource( 6 )
+4/shape_one_way = false
+4/shape_one_way_margin = 1.0
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+4/z_index = 0
+5/name = "duvar.png 5"
+5/texture = ExtResource( 3 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 0, 0, 128, 128 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "duvar-birleşimli.png 6"
+6/texture = ExtResource( 2 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 0, 0, 128, 128 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape = SubResource( 7 )
+6/shape_one_way = false
+6/shape_one_way_margin = 1.0
+6/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 7 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+6/z_index = 0
+
+[sub_resource type="SpriteFrames" id=9]
+animations = [ {
+"frames": [ ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 25.6, 42.6667 )
+
+[sub_resource type="TileSet" id=11]
+0/name = "duvaarici.png 0"
+0/texture = ExtResource( 4 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 128, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "duvaaricikare.png 1"
+1/texture = ExtResource( 5 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 128, 128 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+
+[sub_resource type="Animation" id=12]
+resource_name = "1"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1500, 320 ), Vector2( 2500, 320 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 32, 352 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 352, 64 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 32, 384 )
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 12, 384 )
+
+[sub_resource type="OccluderPolygon2D" id=17]
+closed = false
+polygon = PoolVector2Array( 2688, 512, 2688, 704 )
+
+[sub_resource type="OccluderPolygon2D" id=18]
+closed = false
+polygon = PoolVector2Array( 2688, 1280, 2688, 1536 )
+
+[sub_resource type="RectangleShape2D" id=19]
+extents = Vector2( 32, 512 )
+
+[node name="level2" type="Node2D"]
+modulate = Color( 0.67451, 0.658824, 0.658824, 1 )
+
+[node name="zemin" type="TileMap" parent="."]
+tile_set = SubResource( 8 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 0, 5, 0, 4, 5, 0, 8, 5, 0, 12, 5, 0, 16, 5, 0, 20, 5, 0, 24, 5, 0, 28, 5, 0, 32, 5, 0, 36, 5, 0, 40, 5, 0, 44, 5, 0, 48, 5, 0, 52, 5, 0, 56, 5, 0, 60, 5, 0, 64, 5, 0, 68, 5, 0, 72, 5, 0, 76, 5, 0, 80, 5, 0, 84, 5, 0, 88, 5, 0, 92, 5, 0, 96, 2, 0, 262144, 4, 0, 262148, 4, 0, 262152, 4, 0, 262156, 4, 0, 262160, 4, 0, 262164, 4, 0, 262168, 4, 0, 262172, 4, 0, 262176, 4, 0, 262180, 4, 0, 262184, 4, 0, 262188, 4, 0, 262192, 4, 0, 262196, 4, 0, 262200, 4, 0, 262204, 4, 0, 262208, 4, 0, 262212, 4, 0, 262216, 4, 0, 262220, 4, 0, 262224, 4, 0, 262228, 4, 0, 262232, 4, 0, 262236, 4, 0, 262240, 2, 0, 524288, 0, 0, 524292, 0, 0, 524296, 0, 0, 524300, 0, 0, 524304, 0, 0, 524308, 0, 0, 524312, 0, 0, 524316, 0, 0, 524320, 0, 0, 524324, 0, 0, 524328, 0, 0, 524332, 0, 0, 524336, 0, 0, 524340, 0, 0, 524344, 0, 0, 524348, 0, 0, 524352, 0, 0, 524356, 0, 0, 524360, 0, 0, 524364, 0, 0, 524368, 0, 0, 524372, 0, 0, 524376, 0, 0, 524380, 0, 0, 524384, 2, 0, 786432, 0, 0, 786436, 0, 0, 786440, 0, 0, 786444, 0, 0, 786448, 0, 0, 786452, 0, 0, 786456, 0, 0, 786460, 0, 0, 786464, 0, 0, 786468, 0, 0, 786472, 0, 0, 786476, 0, 0, 786480, 0, 0, 786484, 0, 0, 786488, 0, 0, 786492, 0, 0, 786496, 0, 0, 786500, 0, 0, 786504, 0, 0, 786508, 0, 0, 786512, 0, 0, 786516, 0, 0, 786520, 0, 0, 786524, 0, 0, 786528, 2, 0, 1048608, 0, 0, 1048612, 0, 0, 1048616, 0, 0, 1048620, 0, 0, 1048624, 0, 0, 1048628, 0, 0, 1048632, 0, 0, 1048636, 0, 0, 1048640, 0, 0, 1048644, 0, 0, 1048648, 0, 0, 1048652, 0, 0, 1048656, 0, 0, 1048660, 0, 0, 1048664, 0, 0, 1048668, 0, 0, 1048672, 2, 0, 1245184, 1, 0, 1245188, 1, 0, 1245191, 1, 0, 1245194, 1, 0, 1245195, 1, 0, 1245198, 1, 0, 1245201, 1, 0, 1245204, 1, 0, 1245206, 1, 0, 1245208, 1, 0, 1245210, 1, 0, 1245212, 1, 0, 1310804, 0, 0, 1310808, 0, 0, 1310812, 0, 0, 1310816, 2, 0, 1376256, 1, 0, 1376260, 1, 0, 1376264, 1, 0, 1376268, 1, 0, 1376272, 1, 0, 1376276, 1, 0, 1376280, 1, 0, 1376284, 1, 0, 1376288, 1, 0, 1376292, 1, 0, 1376296, 1, 0, 1376300, 1, 0, 1376304, 1, 0, 1376308, 1, 0, 1376312, 1, 0, 1376316, 1, 0, 1376320, 1, 0, 1376324, 1, 0, 1376328, 1, 0, 1376332, 1, 0, 1376336, 1, 0, 1376339, 2, 0, 1572948, 0, 0, 1572952, 0, 0, 1572956, 0, 0, 1572960, 2, 0, 1638483, 2, 0, 1835092, 0, 0, 1835096, 0, 0, 1835100, 0, 0, 1835104, 2, 0, 1900627, 2, 0, 2097236, 0, 0, 2097240, 0, 0, 2097244, 0, 0, 2097248, 2, 0, 2162771, 2, 0, 2359380, 0, 0, 2359384, 0, 0, 2359388, 0, 0, 2359392, 2, 0, 2424915, 2, 0, 2424928, 2, 0, 2621448, 5, 0, 2621452, 5, 0, 2621456, 5, 0, 2621460, 5, 0, 2621464, 5, 0, 2621468, 5, 0, 2621472, 5, 0, 2621476, 5, 0, 2621480, 5, 0, 2621484, 5, 0, 2621488, 5, 0, 2621492, 5, 0, 2621496, 5, 0, 2621500, 5, 0, 2621504, 5, 0, 2621508, 5, 0, 2621512, 5, 0, 2621516, 5, 0, 2621520, 5, 0, 2621524, 0, 0, 2621528, 0, 0, 2621532, 0, 0, 2687072, 2, 0, 2883592, 4, 0, 2883596, 4, 0, 2883600, 4, 0, 2883604, 4, 0, 2883608, 4, 0, 2883612, 4, 0, 2883616, 4, 0, 2883620, 4, 0, 2883624, 4, 0, 2883628, 4, 0, 2883632, 4, 0, 2883636, 4, 0, 2883640, 4, 0, 2883644, 4, 0, 2883648, 4, 0, 2883652, 4, 0, 2883656, 4, 0, 2883660, 4, 0, 2883664, 4, 0, 2883668, 0, 0, 2883672, 0, 0, 2883676, 0, 0, 2883680, 2, 0, 3145736, 0, 0, 3145740, 0, 0, 3145744, 0, 0, 3145748, 0, 0, 3145752, 0, 0, 3145756, 0, 0, 3145760, 0, 0, 3145764, 0, 0, 3145768, 0, 0, 3145772, 0, 0, 3145776, 0, 0, 3145780, 0, 0, 3145784, 0, 0, 3145788, 0, 0, 3145792, 0, 0, 3145796, 0, 0, 3145800, 0, 0, 3145804, 0, 0, 3145808, 0, 0, 3145812, 0, 0, 3145816, 0, 0, 3145820, 0, 0, 3145824, 2, 0, 3407880, 0, 0, 3407884, 0, 0, 3407888, 0, 0, 3407892, 0, 0, 3407896, 0, 0, 3407900, 0, 0, 3407904, 0, 0, 3407908, 0, 0, 3407912, 0, 0, 3407916, 0, 0, 3407920, 0, 0, 3407924, 0, 0, 3407928, 0, 0, 3407932, 0, 0, 3407936, 0, 0, 3407940, 0, 0, 3407944, 0, 0, 3407948, 0, 0, 3407952, 0, 0, 3407956, 0, 0, 3407960, 0, 0, 3407964, 0, 0, 3407968, 2, 0, 3670028, 0, 0, 3670032, 0, 0, 3670036, 0, 0, 3670040, 0, 0, 3670044, 0, 0, 3670048, 0, 0, 3670052, 0, 0, 3670056, 0, 0, 3670060, 0, 0, 3670064, 0, 0, 3670068, 0, 0, 3670072, 0, 0, 3670076, 0, 0, 3670080, 0, 0, 3670084, 0, 0, 3670088, 0, 0, 3670092, 0, 0, 3670096, 0, 0, 3670100, 0, 0, 3670104, 0, 0, 3670108, 0, 0, 3670112, 2, 0, 3801184, 2, 0, 3997702, 1, 0, 3997703, 1, 0, 3997704, 1, 0, 3997705, 1, 0, 3997706, 1, 0, 3997707, 1, 0, 3997708, 1, 0, 3997709, 1, 0, 3997710, 1, 0, 3997711, 1, 0, 3997712, 1, 0, 3997713, 1, 0, 3997714, 1, 0, 3997715, 1, 0, 3997716, 1, 0, 3997717, 1, 0, 3997718, 1, 0, 3997719, 1, 0, 3997720, 1, 0, 3997721, 1, 0, 3997722, 1, 0, 3997723, 1, 0, 3997724, 1, 0, 3997725, 1, 0, 3997726, 1, 0, 3997727, 1, 0, 3997728, 1, 0, 3997729, 1, 0, 3997730, 1, 0, 3997731, 1, 0, 3997732, 1, 0, 3997733, 1, 0, 3997734, 1, 0, 3997735, 1, 0, 3997736, 1, 0, 3997737, 1, 0, 3997738, 1, 0, 3997739, 1, 0, 3997740, 1, 0, 3997741, 1, 0, 3997742, 1, 0, 3997743, 1, 0, 3997744, 1, 0, 3997745, 1, 0, 3997746, 1, 0, 3997747, 1, 0, 3997748, 1, 0, 3997749, 1, 0, 3997750, 1, 0, 3997751, 1, 0, 3997752, 1, 0, 3997753, 1, 0, 3997754, 1, 0, 3997755, 1, 0, 3997756, 1, 0, 3997757, 1, 0, 3997758, 1, 0, 3997759, 1, 0, 3997760, 1, 0, 3997761, 1, 0, 3997762, 1, 0, 3997763, 1, 0, 3997764, 1, 0, 3997768, 1, 0, 3997772, 1, 0, 3997776, 1, 0, 3997780, 1, 0, 3997784, 1, 0, 3997788, 1, 0, 3997789, 1, 0, 4063297, 1, 0 )
+
+[node name="kan" type="Sprite" parent="."]
+position = Vector2( 1504, 256 )
+scale = Vector2( 2.5, 1.5 )
+texture = ExtResource( 15 )
+
+[node name="kan2" type="Sprite" parent="kan"]
+position = Vector2( 435.2, 106.667 )
+scale = Vector2( 1.6, 1 )
+texture = ExtResource( 17 )
+
+[node name="kan3" type="Sprite" parent="kan"]
+position = Vector2( 563.2, 469.333 )
+scale = Vector2( 0.8, 1.66667 )
+texture = ExtResource( 16 )
+
+[node name="kan4" type="Sprite" parent="kan"]
+position = Vector2( 409.6, 928 )
+rotation = 3.14159
+scale = Vector2( 0.8, 1 )
+texture = ExtResource( 15 )
+
+[node name="kan5" type="Sprite" parent="kan"]
+position = Vector2( 128, 768 )
+rotation = -1.5708
+scale = Vector2( 1.33333, 1 )
+texture = ExtResource( 17 )
+
+[node name="duvar lekesi" type="Sprite" parent="kan"]
+position = Vector2( 6.10352e-05, -42.6667 )
+scale = Vector2( 0.6, 1 )
+texture = ExtResource( 14 )
+
+[node name="gulizar" type="AnimatedSprite" parent="."]
+position = Vector2( 1664, 1488 )
+scale = Vector2( 2.5, 3 )
+frames = SubResource( 9 )
+frame = 12
+playing = true
+
+[node name="Light2D" type="Light2D" parent="gulizar"]
+position = Vector2( 0, -26.6667 )
+texture = ExtResource( 18 )
+color = Color( 1, 0, 0, 1 )
+energy = 3.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="gulizar"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gulizar/StaticBody2D"]
+position = Vector2( 0, -5.33334 )
+shape = SubResource( 10 )
+
+[node name="Nebula-mum" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2176, 1408 )
+
+[node name="duvarlar" type="TileMap" parent="."]
+tile_set = SubResource( 11 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 1048576, 0, 0, 1048580, 0, 0, 1048584, 0, 0, 1048588, 0, 0, 1048592, 0, 0, 1048596, 0, 0, 1048600, 0, 0, 1048604, 0, 0, 1048608, 0, 0, 1048612, 0, 0, 1048615, 0, 0, 1048619, 0, 0, 1048620, 0, 0, 1048624, 0, 0, 1048628, 0, 0, 1048632, 0, 0, 1048636, 0, 0, 1048640, 0, 0, 1048644, 0, 0, 1048648, 0, 0, 1048652, 0, 0, 1048656, 0, 0, 1048673, 1, 0, 1048677, 1, 0, 1114112, 1, 0, 1114116, 1, 0, 1114120, 1, 0, 1114123, 1, 0, 1114125, 1, 0, 1114128, 1, 0, 1114129, 1, 0, 1114133, 1, 0, 1114137, 1, 0, 1114140, 1, 0, 1114144, 1, 0, 1114148, 1, 0, 1114152, 1, 0, 1114156, 1, 0, 1114160, 1, 0, 1114164, 1, 0, 1114168, 1, 0, 1114172, 1, 0, 1114176, 1, 0, 1114180, 1, 0, 1114184, 1, 0, 1114188, 1, 0, 1114192, 1, 0, 1310817, 1, 0, 1310821, 1, 0, 1441863, 1, 0, 1441867, 1, 0, 1441871, 1, 0, 1572961, 1, 0, 1572965, 1, 0, 1704007, 1, 0, 1704011, 1, 0, 1704015, 1, 0, 1835105, 1, 0, 1835109, 1, 0, 1900619, 1, 0, 1900620, 1, 0, 1900623, 1, 0, 1966151, 1, 0, 2031691, 1, 0, 2097231, 1, 0, 2097249, 1, 0, 2097253, 1, 0, 2228295, 1, 0, 2228299, 1, 0, 2359367, 1, 0, 2359371, 1, 0, 2359375, 1, 0, 2359393, 1, 0, 2359397, 1, 0, 2424933, 1, 0, 2621537, 1, 0, 2687077, 1, 0, 2883681, 1, 0, 2949221, 1, 0, 3145825, 1, 0, 3145829, 1, 0, 3211365, 1, 0, 3407969, 1, 0, 3473509, 1, 0, 3670024, 0, 0, 3670025, 0, 0, 3670028, 0, 0, 3670032, 0, 0, 3670036, 0, 0, 3670040, 0, 0, 3670044, 0, 0, 3670048, 0, 0, 3670052, 0, 0, 3670056, 0, 0, 3670060, 0, 0, 3670064, 0, 0, 3670068, 0, 0, 3670069, 0, 0, 3670073, 0, 0, 3670077, 0, 0, 3670081, 0, 0, 3670084, 0, 0, 3670088, 0, 0, 3670092, 0, 0, 3670096, 0, 0, 3670100, 0, 0, 3670104, 0, 0, 3670108, 0, 0, 3670113, 1, 0, 3670117, 1, 0, 3735560, 1, 0, 3735564, 1, 0, 3735568, 1, 0, 3735572, 1, 0, 3735576, 1, 0, 3735579, 1, 0, 3735580, 1, 0, 3735584, 1, 0, 3735588, 1, 0, 3735592, 1, 0, 3735596, 1, 0, 3735600, 1, 0, 3735604, 1, 0, 3735608, 1, 0, 3735612, 1, 0, 3735616, 1, 0, 3735620, 1, 0, 3735624, 1, 0, 3735628, 1, 0, 3735632, 1, 0, 3735636, 1, 0, 3735640, 1, 0, 3735644, 1, 0, 3801096, 1, 0, 3801100, 1, 0, 3801104, 1, 0, 3801108, 1, 0, 3801112, 1, 0, 3801116, 1, 0, 3801120, 1, 0, 3801124, 1, 0, 3801128, 1, 0, 3801131, 1, 0, 3801135, 1, 0, 3801136, 1, 0, 3997704, 0, 0, 3997705, 0, 0, 3997706, 0, 0, 3997707, 0, 0, 3997708, 0, 0, 3997709, 0, 0, 3997710, 0, 0, 3997711, 0, 0, 3997712, 0, 0, 3997713, 0, 0, 3997714, 0, 0, 3997715, 0, 0, 3997716, 0, 0, 3997717, 0, 0, 3997718, 0, 0, 3997719, 0, 0, 3997720, 0, 0, 3997721, 0, 0, 3997722, 0, 0, 3997723, 0, 0, 3997724, 0, 0, 3997725, 0, 0, 3997726, 0, 0, 3997727, 0, 0, 3997728, 0, 0, 3997729, 0, 0, 3997730, 0, 0, 3997731, 0, 0, 3997732, 0, 0, 3997733, 0, 0, 3997734, 0, 0, 3997735, 0, 0, 3997736, 0, 0, 3997737, 0, 0, 3997738, 0, 0, 3997739, 0, 0, 3997740, 0, 0, 3997741, 0, 0, 3997742, 0, 0, 3997743, 0, 0, 3997744, 0, 0 )
+
+[node name="siluet" type="Sprite" parent="."]
+position = Vector2( 1500, 320 )
+scale = Vector2( 1.8125, 2.25 )
+texture = ExtResource( 21 )
+script = ExtResource( 23 )
+
+[node name="siluetani" type="AnimationPlayer" parent="siluet"]
+anims/1 = SubResource( 12 )
+script = ExtResource( 22 )
+
+[node name="dialog" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dialog"]
+position = Vector2( 0, 352 )
+shape = SubResource( 13 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="kam3-3" type="Area2D" parent="Node2D"]
+script = ExtResource( 11 )
+
+[node name="kam3" type="Camera2D" parent="Node2D/kam3-3"]
+position = Vector2( 2592, 320 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/kam3-3"]
+position = Vector2( 3040, 576 )
+scale = Vector2( 1, 0.25 )
+shape = SubResource( 14 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/kam3-3"]
+position = Vector2( 2112, 320 )
+scale = Vector2( 0.5, 1 )
+shape = SubResource( 15 )
+
+[node name="kam4-4" type="Area2D" parent="Node2D"]
+script = ExtResource( 10 )
+
+[node name="kam4" type="Camera2D" parent="Node2D/kam4-4"]
+position = Vector2( 2848, 928 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/kam4-4"]
+position = Vector2( 3040, 704 )
+scale = Vector2( 1, 0.25 )
+shape = SubResource( 14 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Node2D/kam4-4"]
+position = Vector2( 2912, 1184 )
+scale = Vector2( 1, 0.25 )
+shape = SubResource( 14 )
+
+[node name="kam5-5" type="Area2D" parent="Node2D"]
+script = ExtResource( 13 )
+
+[node name="kam5" type="Camera2D" parent="Node2D/kam5-5"]
+position = Vector2( 2848, 1600 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Node2D/kam5-5"]
+position = Vector2( 2912, 1312 )
+scale = Vector2( 1, 0.25 )
+shape = SubResource( 14 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Node2D/kam5-5"]
+position = Vector2( 2400, 1600 )
+scale = Vector2( 0.5, 1 )
+shape = SubResource( 15 )
+
+[node name="kam6-6" type="Area2D" parent="Node2D"]
+script = ExtResource( 12 )
+
+[node name="kam6" type="Camera2D" parent="Node2D/kam6-6"]
+position = Vector2( 1824, 1600 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Node2D/kam6-6"]
+position = Vector2( 2272, 1600 )
+scale = Vector2( 0.5, 1 )
+shape = SubResource( 15 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Node2D/kam6-6"]
+position = Vector2( 1376, 1632 )
+scale = Vector2( 0.5, 1 )
+shape = SubResource( 15 )
+
+[node name="kam1-1" type="Area2D" parent="Node2D"]
+script = ExtResource( 9 )
+
+[node name="kam1" type="Camera2D" parent="Node2D/kam1-1"]
+position = Vector2( 512, 320 )
+current = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/kam1-1"]
+position = Vector2( 960, 352 )
+shape = SubResource( 16 )
+
+[node name="kam2-2" type="Area2D" parent="Node2D"]
+script = ExtResource( 8 )
+
+[node name="kam2" type="Camera2D" parent="Node2D/kam2-2"]
+position = Vector2( 1536, 320 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/kam2-2"]
+position = Vector2( 1088, 352 )
+shape = SubResource( 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/kam2-2"]
+position = Vector2( 1984, 320 )
+scale = Vector2( 0.5, 1 )
+shape = SubResource( 15 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="kam7-7" type="Area2D" parent="Node2D"]
+script = ExtResource( 25 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Node2D/kam7-7"]
+position = Vector2( 1248, 1632 )
+scale = Vector2( 0.5, 1 )
+shape = SubResource( 15 )
+
+[node name="kam7" type="Camera2D" parent="Node2D/kam7-7"]
+position = Vector2( 800, 1600 )
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="."]
+occluder = SubResource( 17 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource( 18 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 2016, 1760 )
+shape = SubResource( 19 )
+
+[node name="Dialog-gulizar" parent="." instance=ExtResource( 24 )]
+modulate = Color( 0.968627, 0.827451, 0.827451, 1 )
+light_mask = 4
+margin_left = 1824.0
+margin_top = 1920.0
+margin_right = 1824.0
+margin_bottom = 1920.0
+[connection signal="animation_finished" from="siluet/siluetani" to="siluet" method="_on_siluetani_animation_finished"]
+[connection signal="body_exited" from="Node2D/kam3-3" to="Node2D/kam3-3" method="_on_kam33_body_exited"]
+[connection signal="body_entered" from="Node2D/kam4-4" to="Node2D/kam4-4" method="_on_kam44_body_entered"]
+[connection signal="body_entered" from="Node2D/kam5-5" to="Node2D/kam5-5" method="_on_kam55_body_entered"]
+[connection signal="body_entered" from="Node2D/kam6-6" to="Node2D/kam6-6" method="_on_kam66_body_entered"]
+[connection signal="body_entered" from="Node2D/kam1-1" to="Node2D/kam1-1" method="_on_kam11_body_entered"]
+[connection signal="body_entered" from="Node2D/kam2-2" to="Node2D/kam2-2" method="_on_kam22_body_entered"]
+[connection signal="body_entered" from="Node2D/kam2-2" to="siluet/siluetani" method="_on_kam22_body_entered"]
+[connection signal="body_entered" from="Node2D/kam7-7" to="Node2D/kam7-7" method="_on_kam77_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Dialog-gulizar" method="_on_Area2D_body_entered"]
+[connection signal="hareketlilik" from="Dialog-gulizar" to="Nebula-mum" method="_on_Dialoggulizar_hareketlilik"]
+[connection signal="hareketsizlik" from="Dialog-gulizar" to="Nebula-mum" method="_on_Dialoggulizar_hareketsizlik"]

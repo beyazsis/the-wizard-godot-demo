@@ -1,0 +1,142 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://dialog/level1-mum-thanks/Dialog-thanks-node.gd" type="Script" id=1]
+[ext_resource path="res://dialog/şablon/font/Cave-Story.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://dialog/level1/font/Cave-Story.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://dialog/şablon/texture/govde.png" type="Texture" id=4]
+[ext_resource path="res://dialog/şablon/texture/tus.png" type="Texture" id=5]
+[ext_resource path="res://dialog/level1/texture/isimkutusu.png" type="Texture" id=6]
+[ext_resource path="res://dialog/level1-mum-thanks/DialogBox-thanks.gd" type="Script" id=7]
+[ext_resource path="res://dialog/level1-aurora/font/Cave-Story.ttf" type="DynamicFontData" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 33
+outline_size = 1
+outline_color = Color( 0.901961, 0.976471, 0, 1 )
+extra_spacing_char = 2
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 33
+outline_size = 1
+outline_color = Color( 0.85098, 0.0941176, 0.698039, 1 )
+extra_spacing_char = 2
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 37
+extra_spacing_char = 1
+font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=4]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( -0.1, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 879.511, 130 ), Vector2( 879.511, 120 ) ]
+}
+
+[node name="Dialog-thanks" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dialogthanks" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -480.0
+margin_top = -216.0
+margin_right = 480.0
+margin_bottom = -56.0
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Dialogthanks"]
+margin_right = 960.0
+margin_bottom = 160.0
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="Dialogthanks"]
+margin_left = 32.0
+margin_top = -55.0
+margin_right = 224.0
+margin_bottom = 8.0
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="nebula" type="RichTextLabel" parent="Dialogthanks/TextureRect2"]
+visible = false
+anchor_left = 0.226
+anchor_top = 0.43
+anchor_right = 0.226
+anchor_bottom = 0.43
+margin_left = -0.391998
+margin_top = -4.09
+margin_right = 148.608
+margin_bottom = 54.91
+custom_fonts/normal_font = SubResource( 1 )
+text = "NEBULA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="aurora" type="RichTextLabel" parent="Dialogthanks/TextureRect2"]
+margin_left = 37.0
+margin_top = 23.0
+margin_right = 187.0
+margin_bottom = 63.0
+custom_fonts/normal_font = SubResource( 2 )
+text = "AURORA"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Dialogthanks"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 50.0
+margin_top = 20.0
+margin_right = -50.0
+margin_bottom = -20.0
+custom_fonts/normal_font = SubResource( 3 )
+bbcode_enabled = true
+bbcode_text = "testing dialog. This is a looooong dialog. Lest see."
+text = "testing dialog. This is a looooong dialog. Lest see."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tus" type="Sprite" parent="Dialogthanks"]
+visible = false
+position = Vector2( 879.511, 131.597 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Dialogthanks/tus"]
+autoplay = "tus"
+anims/tus = SubResource( 4 )
+
+[node name="Tween" type="Tween" parent="Dialogthanks"]
+[connection signal="baslat" from="." to="Dialogthanks" method="_on_Dialogmasa_baslat"]
+[connection signal="dialog_bitti" from="Dialogthanks" to="Dialogthanks" method="_on_Dialogaurora_dialog_bitti"]
+[connection signal="dialog_bitti" from="Dialogthanks" to="." method="_on_Dialogaurora_dialog_bitti"]
+[connection signal="tween_completed" from="Dialogthanks/Tween" to="Dialogthanks" method="_on_Tween_tween_completed"]

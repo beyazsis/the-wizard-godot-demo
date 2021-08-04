@@ -1,0 +1,808 @@
+[gd_scene load_steps=95 format=2]
+
+[ext_resource path="res://textures/room-aurora/masaa_3.png" type="Texture" id=1]
+[ext_resource path="res://textures/room-aurora/gardolap.png" type="Texture" id=2]
+[ext_resource path="res://mekanlar/apartman/level1/room-nebula-texturess.res" type="TileSet" id=3]
+[ext_resource path="res://mekanlar/apartman/calisma-masasi-non-animation/calısma-masası-non-anima.tscn" type="PackedScene" id=4]
+[ext_resource path="res://mekanlar/apartman/level1/Nebula.tscn" type="PackedScene" id=5]
+[ext_resource path="res://characters/Nebula/scanes/Nebula-mum.tscn" type="PackedScene" id=6]
+[ext_resource path="res://textures/room-nebula/candle-simple/0.png" type="Texture" id=7]
+[ext_resource path="res://textures/room-nebula/candle-simple/1.png" type="Texture" id=8]
+[ext_resource path="res://textures/room-nebula/yatak1.png" type="Texture" id=9]
+[ext_resource path="res://textures/enterance1/duvaarici.png" type="Texture" id=10]
+[ext_resource path="res://textures/room-nebula/wiccatablo.png" type="Texture" id=11]
+[ext_resource path="res://mekanlar/apartman/level1/auroracam.gd" type="Script" id=12]
+[ext_resource path="res://mekanlar/apartman/level1/aurorakamera.gd" type="Script" id=13]
+[ext_resource path="res://mekanlar/apartman/level1/koridor-merdivenTOkor.gd" type="Script" id=14]
+[ext_resource path="res://mekanlar/apartman/level1/koridor1-2.gd" type="Script" id=15]
+[ext_resource path="res://mekanlar/apartman/level1/koridor2-1.gd" type="Script" id=16]
+[ext_resource path="res://mekanlar/apartman/level1/nebula-spawn-1.gd" type="Script" id=17]
+[ext_resource path="res://textures/lights/candlelight.png" type="Texture" id=18]
+[ext_resource path="res://mekanlar/apartman/level1/nebulakapı.gd" type="Script" id=19]
+[ext_resource path="res://mekanlar/apartman/level1/room-nebula-cam.gd" type="Script" id=20]
+[ext_resource path="res://textures/room-nebula/dolap.png" type="Texture" id=21]
+[ext_resource path="res://textures/room-nebula/kitaplik.png" type="Texture" id=22]
+[ext_resource path="res://textures/room-nebula/sifonyer.png" type="Texture" id=23]
+[ext_resource path="res://textures/room-nebula/halipersfektifli.png" type="Texture" id=24]
+[ext_resource path="res://textures/room-nebula/candle-simple/2.png" type="Texture" id=25]
+[ext_resource path="res://textures/room-nebula/candle-simple/3.png" type="Texture" id=26]
+[ext_resource path="res://characters/Aurora/auroratasarım.png" type="Texture" id=27]
+[ext_resource path="res://textures/enterance1/acikkapi.png" type="Texture" id=28]
+[ext_resource path="res://textures/enterance1/kapi.png" type="Texture" id=29]
+[ext_resource path="res://textures/room-aurora/acikkapi.png" type="Texture" id=30]
+[ext_resource path="res://textures/enterance1/candle-coverless/candle_4.png" type="Texture" id=31]
+[ext_resource path="res://textures/room-aurora/kapiauroa.png" type="Texture" id=32]
+[ext_resource path="res://textures/enterance1/candle-coverless/candle_2.png" type="Texture" id=33]
+[ext_resource path="res://textures/enterance1/candle-coverless/candle_3.png" type="Texture" id=34]
+[ext_resource path="res://textures/enterance1/candle-coverless/candle_1.png" type="Texture" id=35]
+[ext_resource path="res://textures/room-aurora/tablo.png" type="Texture" id=36]
+[ext_resource path="res://textures/room-aurora/duvar.png" type="Texture" id=37]
+[ext_resource path="res://textures/room-aurora/duvar-birlesimli.png" type="Texture" id=38]
+[ext_resource path="res://textures/room-aurora/yatak.png" type="Texture" id=39]
+[ext_resource path="res://textures/room-aurora/sifonyer-aurora.png" type="Texture" id=40]
+[ext_resource path="res://textures/room-aurora/sandalyea.png" type="Texture" id=41]
+[ext_resource path="res://textures/room-aurora/masaa_5.png" type="Texture" id=42]
+[ext_resource path="res://textures/room-aurora/masaa_2.png" type="Texture" id=43]
+[ext_resource path="res://textures/room-aurora/masaa_1.png" type="Texture" id=44]
+[ext_resource path="res://textures/room-aurora/masaa_4.png" type="Texture" id=45]
+[ext_resource path="res://textures/room-aurora/masaa_6.png" type="Texture" id=46]
+[ext_resource path="res://mekanlar/apartman/aurora-room/mum-sifonyer.tscn" type="PackedScene" id=47]
+[ext_resource path="res://mekanlar/apartman/koridorlar.tscn" type="PackedScene" id=48]
+[ext_resource path="res://sound/doors/circular-door.wav" type="AudioStream" id=49]
+[ext_resource path="res://sound/doors/closing-door-1.wav" type="AudioStream" id=50]
+[ext_resource path="res://textures/enterance1/duvaaricidik.png" type="Texture" id=51]
+[ext_resource path="res://mekanlar/apartman/level1/level2.gd" type="Script" id=52]
+[ext_resource path="res://textures/enterance1/duvaaricikare.png" type="Texture" id=53]
+[ext_resource path="res://dialog/level1/Dialog.tscn" type="PackedScene" id=54]
+[ext_resource path="res://dialog/level1-masa/Dialog-masa.tscn" type="PackedScene" id=55]
+[ext_resource path="res://mekanlar/apartman/level1/dialog-masa.gd" type="Script" id=56]
+[ext_resource path="res://dialog/level1-mum-yok/Dialog-mum.tscn" type="PackedScene" id=57]
+[ext_resource path="res://dialog/level1-aurora/Dialog-aurora.tscn" type="PackedScene" id=58]
+[ext_resource path="res://dialog/level1-mum-thanks/Dialog-thanks.tscn" type="PackedScene" id=59]
+[ext_resource path="res://dialog/dialog-auroraya-git/Dialog-auroraya-git.tscn" type="PackedScene" id=60]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 48, 48 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 64, 128 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 31.0303, 70.5306 )
+
+[sub_resource type="OccluderPolygon2D" id=4]
+cull_mode = 2
+polygon = PoolVector2Array( -31.0303, 70.5305, 31.0303, 70.5305, 31.0303, 62.6938, -31.0303, 62.6938 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 25 ), ExtResource( 26 ) ],
+"loop": true,
+"name": "1",
+"speed": 3.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 128, 128 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 64, 64 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 64, 160 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 64, 32 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 64, 256 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 96, 128 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 96, 10 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 96, 32 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 32, 256 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 32, 256 )
+
+[sub_resource type="SpriteFrames" id=16]
+animations = [ {
+"frames": [ ExtResource( 35 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 31 ) ],
+"loop": true,
+"name": "default",
+"speed": 3.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 32, 256 )
+
+[sub_resource type="ConvexPolygonShape2D" id=18]
+points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=19]
+points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
+
+[sub_resource type="TileSet" id=20]
+0/name = "duvar-birlesimli.png 0"
+0/texture = ExtResource( 38 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 128, 128 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 18 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 18 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "duvar.png 1"
+1/texture = ExtResource( 37 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 128, 128 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 19 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 19 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 32, 32 )
+
+[sub_resource type="RectangleShape2D" id=22]
+extents = Vector2( 30, 51.4262 )
+
+[sub_resource type="RectangleShape2D" id=23]
+extents = Vector2( 9.14288, 27.4286 )
+
+[sub_resource type="SpriteFrames" id=24]
+animations = [ {
+"frames": [ ExtResource( 44 ), ExtResource( 43 ), ExtResource( 1 ), ExtResource( 45 ), ExtResource( 42 ), ExtResource( 46 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=25]
+extents = Vector2( 42.6667, 15.9006 )
+
+[sub_resource type="OccluderPolygon2D" id=26]
+polygon = PoolVector2Array( 0, 0, 128, 0, 128, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=27]
+points = PoolVector2Array( 128, 32, 0, 32, 0, 0, 128, 0 )
+
+[sub_resource type="OccluderPolygon2D" id=28]
+polygon = PoolVector2Array( 32, 128, 0, 128, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=29]
+points = PoolVector2Array( 32, 128, 0, 128, 0, 0, 32, 0 )
+
+[sub_resource type="TileSet" id=30]
+0/name = "duvaarici.png 0"
+0/texture = ExtResource( 10 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 128, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/occluder = SubResource( 26 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 27 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 27 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "duvaaricidik.png 1"
+1/texture = ExtResource( 51 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 32, 128 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/occluder = SubResource( 28 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 29 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 29 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=31]
+extents = Vector2( 64, 192 )
+
+[sub_resource type="ConvexPolygonShape2D" id=32]
+points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
+
+[sub_resource type="TileSet" id=33]
+0/name = "duvaaricikare.png 0"
+0/texture = ExtResource( 53 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 128, 128 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 32 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 32 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "duvaaricikare.png 1"
+1/texture = ExtResource( 53 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 128, 128 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "duvaaricidik.png 2"
+2/texture = ExtResource( 51 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 32, 128 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "duvaarici.png 3"
+3/texture = ExtResource( 10 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 128, 32 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "duvaaricikare.png 4"
+4/texture = ExtResource( 53 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 128, 128 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+
+[sub_resource type="CircleShape2D" id=34]
+radius = 128.0
+
+[node name="level1" type="Node2D"]
+modulate = Color( 0.109804, 0.109804, 0.109804, 1 )
+script = ExtResource( 17 )
+
+[node name="TileMap" type="TileMap" parent="."]
+z_as_relative = false
+tile_set = ExtResource( 3 )
+cell_y_sort = true
+format = 1
+tile_data = PoolIntArray( 65534, 2, 0, 0, 2, 0, 2, 2, 0, 4, 2, 0, 6, 2, 0, 8, 2, 0, 10, 2, 0, 12, 2, 0, 14, 2, 0, 16, 2, 0, 19, 0, 0, 21, 0, 0, 23, 0, 0, 25, 0, 0, 27, 0, 0, 29, 0, 0, 31, 0, 0, 33, 0, 0, 35, 0, 0, 37, 0, 0, 39, 0, 0, 196606, 1, 0, 131072, 1, 0, 131074, 1, 0, 131076, 1, 0, 131078, 1, 0, 131080, 1, 0, 131082, 1, 0, 131084, 1, 0, 131086, 1, 0, 131088, 1, 0, 131091, 0, 0, 131093, 0, 0, 131095, 0, 0, 131097, 0, 0, 131099, 0, 0, 131101, 0, 0, 131103, 0, 0, 131105, 0, 0, 131107, 0, 0, 131109, 0, 0, 131111, 0, 0, 196625, 3, 0, 327678, 0, 0, 262144, 0, 0, 262146, 0, 0, 262148, 0, 0, 262150, 0, 0, 262152, 0, 0, 262154, 0, 0, 262156, 0, 0, 262158, 0, 0, 262160, 0, 0, 262161, 3, 0, 262163, 0, 0, 262165, 0, 0, 262167, 0, 0, 262169, 0, 0, 262171, 0, 0, 262173, 0, 0, 262175, 0, 0, 262177, 0, 0, 262179, 0, 0, 262181, 0, 0, 262183, 0, 0, 327697, 3, 0, 458750, 0, 0, 393216, 0, 0, 393218, 0, 0, 393220, 0, 0, 393222, 0, 0, 393224, 0, 0, 393226, 0, 0, 393228, 0, 0, 393230, 0, 0, 393232, 0, 0, 393235, 0, 0, 393237, 0, 0, 393239, 0, 0, 393241, 0, 0, 393243, 0, 0, 393245, 0, 0, 393247, 0, 0, 393249, 0, 0, 393251, 0, 0, 393253, 0, 0, 393255, 0, 0, 458769, 3, 0, 589822, 0, 0, 524288, 0, 0, 524290, 0, 0, 524292, 0, 0, 524294, 0, 0, 524296, 0, 0, 524298, 0, 0, 524300, 0, 0, 524302, 0, 0, 524304, 0, 0, 524305, 3, 0, 524307, 0, 0, 524309, 0, 0, 524311, 0, 0, 524313, 0, 0, 524315, 0, 0, 524317, 0, 0, 524319, 0, 0, 524321, 0, 0, 524323, 0, 0, 524325, 0, 0, 524327, 0, 0, 589841, 3, 0, 720894, 5, 0, 655360, 5, 0, 655362, 5, 0, 655364, 5, 0, 655365, 5, 0, 655367, 0, 0, 655369, 5, 0, 655370, 5, 0, 655372, 5, 0, 655374, 5, 0, 655376, 5, 0, 655378, 5, 0, 655380, 5, 0, 655382, 5, 0, 655384, 5, 0, 655385, 5, 0, 655387, 0, 0, 655389, 5, 0, 655391, 5, 0, 655392, 5, 0, 655394, 5, 0, 655396, 5, 0, 655398, 5, 0, 851966, 4, 0, 786432, 4, 0, 786434, 4, 0, 786436, 4, 0, 786437, 4, 0, 786439, 7, 0, 786441, 4, 0, 786442, 4, 0, 786444, 4, 0, 786446, 4, 0, 786448, 4, 0, 786450, 4, 0, 786452, 4, 0, 786454, 4, 0, 786456, 4, 0, 786457, 4, 0, 786459, 7, 0, 786461, 4, 0, 786462, 4, 0, 786463, 4, 0, 786464, 4, 0, 786466, 4, 0, 786468, 4, 0, 786470, 4, 0, 983038, 7, 0, 917504, 7, 0, 917506, 7, 0, 917508, 7, 0, 917510, 7, 0, 917512, 7, 0, 917514, 7, 0, 917516, 7, 0, 917518, 7, 0, 917520, 7, 0, 917522, 7, 0, 917524, 7, 0, 917526, 7, 0, 917528, 7, 0, 917530, 7, 0, 917532, 7, 0, 917534, 7, 0, 917536, 7, 0, 917538, 7, 0, 917540, 7, 0, 917542, 7, 0, 1048574, 6, 0, 1114110, 6, 0, 1114111, 7, 0, 1048576, 7, 0, 1048578, 7, 0, 1048580, 7, 0, 1048582, 7, 0, 1048584, 7, 0, 1048586, 7, 0, 1048588, 7, 0, 1048590, 7, 0, 1048592, 7, 0, 1048594, 7, 0, 1048596, 7, 0, 1048598, 7, 0, 1048600, 7, 0, 1048602, 7, 0, 1048604, 7, 0, 1048606, 7, 0, 1048608, 7, 0, 1048610, 7, 0, 1048612, 7, 0, 1048614, 7, 0, 1179646, 6, 0, 1179647, 7, 0, 1245182, 6, 0, 1179648, 7, 0, 1179650, 7, 0, 1179652, 7, 0, 1179654, 7, 0, 1179656, 7, 0, 1179658, 7, 0, 1179660, 7, 0, 1179662, 7, 0, 1179664, 7, 0, 1179666, 7, 0, 1179668, 7, 0, 1179670, 7, 0, 1179672, 7, 0, 1179674, 7, 0, 1179676, 7, 0, 1179678, 7, 0, 1179680, 7, 0, 1179682, 7, 0, 1179684, 7, 0, 1179686, 7, 0, 1310718, 6, 0, 1376254, 6, 0 )
+
+[node name="wiccatablo" type="Sprite" parent="."]
+position = Vector2( 144, 80 )
+scale = Vector2( 0.75, 0.666667 )
+texture = ExtResource( 11 )
+
+[node name="sifonyer" type="Sprite" parent="."]
+position = Vector2( 288, 272 )
+texture = ExtResource( 23 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="sifonyer"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sifonyer/KinematicBody2D"]
+shape = SubResource( 1 )
+
+[node name="kitaplik" type="Sprite" parent="."]
+position = Vector2( 928, 176 )
+texture = ExtResource( 22 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="kitaplik"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="kitaplik/StaticBody2D"]
+shape = SubResource( 2 )
+
+[node name="halipersfektifli" type="Sprite" parent="."]
+position = Vector2( 496, 432 )
+scale = Vector2( 2.65, 2.25 )
+texture = ExtResource( 24 )
+
+[node name="dolap" type="Sprite" parent="."]
+position = Vector2( 576, 160 )
+scale = Vector2( 3.09375, 2.04167 )
+texture = ExtResource( 21 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="dolap"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dolap/KinematicBody2D"]
+shape = SubResource( 3 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="dolap/KinematicBody2D"]
+show_behind_parent = true
+occluder = SubResource( 4 )
+
+[node name="Candle" type="AnimatedSprite" parent="."]
+use_parent_material = true
+position = Vector2( 320, 224 )
+scale = Vector2( 2.5, 3.5 )
+frames = SubResource( 5 )
+animation = "1"
+frame = 1
+playing = true
+
+[node name="Light2D" type="Light2D" parent="Candle"]
+position = Vector2( 0, -4.57143 )
+scale = Vector2( 2, 1.625 )
+texture = ExtResource( 18 )
+texture_scale = 0.5
+color = Color( 0.858824, 0.937255, 0.388235, 1 )
+energy = 3.0
+shadow_enabled = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="yatak1" type="Sprite" parent="."]
+position = Vector2( 144, 336 )
+scale = Vector2( 0.875, 1.5 )
+texture = ExtResource( 9 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="yatak1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="yatak1/KinematicBody2D"]
+shape = SubResource( 6 )
+
+[node name="room-nebula-cam" type="Area2D" parent="."]
+position = Vector2( 512, 768 )
+script = ExtResource( 20 )
+
+[node name="room-nebula" type="Camera2D" parent="room-nebula-cam"]
+position = Vector2( 2.38419e-07, -416 )
+current = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="room-nebula-cam"]
+position = Vector2( 0, -64 )
+shape = SubResource( 7 )
+
+[node name="nebula_kapi" type="Area2D" parent="."]
+position = Vector2( 512, 768 )
+script = ExtResource( 19 )
+
+[node name="kapi" type="Sprite" parent="nebula_kapi"]
+modulate = Color( 0.568627, 0.568627, 0.568627, 1 )
+position = Vector2( 0, -10 )
+scale = Vector2( 1, 1.25 )
+texture = ExtResource( 29 )
+
+[node name="acikkapi" type="Sprite" parent="nebula_kapi"]
+visible = false
+modulate = Color( 0.568627, 0.568627, 0.568627, 1 )
+show_behind_parent = true
+position = Vector2( 48, -32 )
+scale = Vector2( 1.64286, 1.21642 )
+texture = ExtResource( 28 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="nebula_kapi"]
+shape = SubResource( 8 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="nebula_kapi"]
+stream = ExtResource( 49 )
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="nebula_kapi"]
+stream = ExtResource( 50 )
+
+[node name="koridor1-2" type="Area2D" parent="."]
+script = ExtResource( 15 )
+
+[node name="koridor" type="Camera2D" parent="koridor1-2"]
+position = Vector2( 512, 960 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="koridor1-2"]
+position = Vector2( 512, 864 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="koridor1-2"]
+position = Vector2( 960, 992 )
+scale = Vector2( 0.5, 1 )
+shape = SubResource( 10 )
+
+[node name="aurorakamera" type="Area2D" parent="."]
+position = Vector2( 2000, 0 )
+script = ExtResource( 13 )
+
+[node name="kapiauroa" type="Sprite" parent="aurorakamera"]
+modulate = Color( 0.568627, 0.568627, 0.568627, 1 )
+position = Vector2( -216, 760 )
+scale = Vector2( 1.125, 1.21429 )
+texture = ExtResource( 32 )
+
+[node name="acikkapi" type="Sprite" parent="aurorakamera"]
+visible = false
+modulate = Color( 0.568627, 0.568627, 0.568627, 1 )
+position = Vector2( -160, 736 )
+scale = Vector2( 1.125, 1.21429 )
+texture = ExtResource( 30 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="aurorakamera"]
+position = Vector2( -240, 768 )
+shape = SubResource( 11 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="aurorakamera"]
+stream = ExtResource( 49 )
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="aurorakamera"]
+stream = ExtResource( 50 )
+
+[node name="auroracam" type="Area2D" parent="aurorakamera"]
+script = ExtResource( 12 )
+
+[node name="room-aurora" type="Camera2D" parent="aurorakamera/auroracam"]
+position = Vector2( -176, 352 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="aurorakamera/auroracam"]
+position = Vector2( -240, 704 )
+shape = SubResource( 12 )
+
+[node name="koridor2-1" type="Area2D" parent="."]
+script = ExtResource( 16 )
+
+[node name="koridor2" type="Camera2D" parent="koridor2-1"]
+position = Vector2( 1536, 960 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="koridor2-1"]
+position = Vector2( 1792, 864 )
+shape = SubResource( 13 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="koridor2-1"]
+position = Vector2( 1088, 992 )
+shape = SubResource( 14 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="koridor2-1"]
+position = Vector2( 1984, 992 )
+shape = SubResource( 15 )
+
+[node name="candlecoverless" type="AnimatedSprite" parent="."]
+position = Vector2( 1248, 896 )
+scale = Vector2( 2.375, 3.33334 )
+frames = SubResource( 16 )
+frame = 2
+playing = true
+
+[node name="Light2D" type="Light2D" parent="candlecoverless"]
+position = Vector2( -4.36557e-11, -9.59998 )
+texture = ExtResource( 18 )
+color = Color( 0.92549, 0.996078, 0.513726, 1 )
+energy = 2.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="candlecoverless2" type="AnimatedSprite" parent="."]
+position = Vector2( 352, 896 )
+scale = Vector2( 2.375, 3.33334 )
+frames = SubResource( 16 )
+frame = 2
+playing = true
+
+[node name="Light2D" type="Light2D" parent="candlecoverless2"]
+position = Vector2( -4.36557e-11, -9.59998 )
+texture = ExtResource( 18 )
+color = Color( 0.92549, 0.996078, 0.513726, 1 )
+energy = 2.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 1952, 672 )
+texture = ExtResource( 18 )
+texture_scale = 5.12
+color = Color( 0.913725, 0.94902, 0.482353, 1 )
+energy = 2.81
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="koridorlar" parent="." instance=ExtResource( 48 )]
+position = Vector2( 2176, 640 )
+script = null
+
+[node name="koridor-merdivenTOkor" type="Area2D" parent="."]
+script = ExtResource( 14 )
+
+[node name="koridor-merdiven" type="Camera2D" parent="koridor-merdivenTOkor"]
+position = Vector2( 2656, 960 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="koridor-merdivenTOkor"]
+position = Vector2( 2144, 992 )
+shape = SubResource( 17 )
+
+[node name="auroraduvarlar" type="TileMap" parent="."]
+tile_set = SubResource( 20 )
+format = 1
+tile_data = PoolIntArray( 18, 1, 0, 20, 1, 0, 22, 1, 0, 24, 1, 0, 26, 1, 0, 28, 1, 0, 30, 1, 0, 32, 1, 0, 34, 1, 0, 36, 1, 0, 37, 0, 0, 38, 1, 0, 65573, 0, 0, 131090, 0, 0, 131092, 0, 0, 131094, 0, 0, 131096, 0, 0, 131098, 0, 0, 131100, 0, 0, 131102, 0, 0, 131104, 0, 0, 131106, 0, 0, 131108, 0, 0, 131109, 0, 0, 131110, 0, 0, 262181, 0, 0, 393253, 0, 0, 524325, 0, 0 )
+
+[node name="gardolap" type="Sprite" parent="."]
+position = Vector2( 1696, 160 )
+scale = Vector2( 1.86019, 2.66667 )
+texture = ExtResource( 2 )
+
+[node name="sifonyyer-aurora" type="StaticBody2D" parent="."]
+
+[node name="sifonyer-aurora" type="Sprite" parent="sifonyyer-aurora"]
+position = Vector2( 1984, 224 )
+scale = Vector2( 0.916668, 1 )
+texture = ExtResource( 40 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sifonyyer-aurora"]
+position = Vector2( 1984, 224 )
+scale = Vector2( 1.35, 1.45 )
+shape = SubResource( 21 )
+
+[node name="auroratasarım" type="Sprite" parent="."]
+position = Vector2( 1888, 192 )
+scale = Vector2( 2, 1.9375 )
+texture = ExtResource( 27 )
+
+[node name="yatak" type="Sprite" parent="."]
+position = Vector2( 2159.29, 286.893 )
+scale = Vector2( 3.757, 3.08972 )
+texture = ExtResource( 39 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="yatak"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="yatak/StaticBody2D"]
+scale = Vector2( 1, 1.25 )
+shape = SubResource( 22 )
+
+[node name="mum-sifonyer" parent="." instance=ExtResource( 47 )]
+position = Vector2( 2048, 416 )
+
+[node name="Candle2" type="AnimatedSprite" parent="."]
+use_parent_material = true
+position = Vector2( 2176, 448 )
+scale = Vector2( 2.5, 3.5 )
+frames = SubResource( 5 )
+animation = "1"
+playing = true
+
+[node name="Light2D" type="Light2D" parent="Candle2"]
+position = Vector2( 0, -4.57143 )
+scale = Vector2( 2, 1.625 )
+texture = ExtResource( 18 )
+texture_scale = 0.5
+color = Color( 0.858824, 0.937255, 0.388235, 1 )
+energy = 3.0
+shadow_enabled = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Nebula" parent="." instance=ExtResource( 5 )]
+position = Vector2( 352, 416 )
+
+[node name="Nebula-mum" parent="." groups=[
+"Player",
+] instance=ExtResource( 6 )]
+visible = false
+position = Vector2( 2080, 352 )
+
+[node name="calisma-masasi" parent="." instance=ExtResource( 4 )]
+position = Vector2( 704, 256 )
+
+[node name="auroramasa" type="StaticBody2D" parent="."]
+position = Vector2( 1472, 512 )
+scale = Vector2( 3, 3.5 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="auroramasa"]
+position = Vector2( 3.05176e-05, -9.14285 )
+scale = Vector2( 1.16667, 1 )
+shape = SubResource( 23 )
+
+[node name="sandalyea" type="Sprite" parent="auroramasa"]
+position = Vector2( -3.05176e-05, -36.5714 )
+scale = Vector2( 1.16667, 1 )
+texture = ExtResource( 41 )
+
+[node name="masaa" type="AnimatedSprite" parent="auroramasa"]
+frames = SubResource( 24 )
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="auroramasa"]
+position = Vector2( 3.05176e-05, 9.14285 )
+scale = Vector2( 1.1, 1.15 )
+shape = SubResource( 25 )
+
+[node name="TileMap2" type="TileMap" parent="."]
+position = Vector2( 448, 768 )
+scale = Vector2( 1, 1.14286 )
+tile_set = SubResource( 30 )
+cell_size = Vector2( 127, 32 )
+format = 1
+tile_data = PoolIntArray( -196613, 0, 0, -196612, 0, 0, -196611, 0, 0, -196610, 0, 0, -196609, 0, 0, -262143, 0, 0, -262142, 0, 0, -262141, 0, 0, -262140, 0, 0, -262139, 0, 0, -262138, 0, 0, -262137, 0, 0, -262136, 0, 0, -262135, 0, 0, -262133, 0, 0, -262132, 0, 0, -262131, 0, 0, -262130, 0, 0, -262129, 0, 0, -262128, 0, 0, -131076, 1, 0, -4, 1, 0, 131068, 1, 0, 262140, 1, 0, 327676, 1, 0, 393212, 1, 0, 458748, 1, 0, 720892, 1, 0, 917499, 0, 0, 917500, 0, 0, 917501, 0, 0, 917502, 0, 0, 917503, 0, 0, 851968, 0, 0, 851969, 0, 0, 851970, 0, 0, 851971, 0, 0, 851972, 0, 0, 851973, 0, 0, 851974, 0, 0, 851975, 0, 0, 851976, 0, 0, 851977, 0, 0, 851978, 0, 0, 851979, 0, 0, 851980, 0, 0, 851981, 0, 0, 851982, 0, 0, 851983, 0, 0, 851984, 0, 0, 851990, 0, 0, 851991, 0, 0, 851992, 0, 0, 851993, 0, 0 )
+
+[node name="tablo" type="Sprite" parent="."]
+position = Vector2( 1480.81, 120.596 )
+texture = ExtResource( 36 )
+
+[node name="level2" type="Area2D" parent="."]
+script = ExtResource( 52 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="level2"]
+position = Vector2( 2976, 1088 )
+shape = SubResource( 31 )
+
+[node name="duvariso" type="TileMap" parent="."]
+tile_set = SubResource( 33 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 32
+format = 1
+tile_data = PoolIntArray( 2228224, 3, 0, 2228228, 3, 0, 2228232, 3, 0, 2228236, 3, 0, 2228240, 3, 0, 2228244, 3, 0, 2228248, 3, 0, 2228252, 3, 0, 2228253, 3, 0, 2228254, 3, 0, 2228258, 3, 0, 2228261, 3, 0, 2228263, 3, 0, 2228266, 3, 0, 2228269, 3, 0, 2228270, 3, 0, 2228274, 3, 0, 2228277, 3, 0, 2228281, 3, 0, 2228285, 3, 0, 2228288, 3, 0, 2228291, 3, 0, 2228295, 3, 0, 2228299, 3, 0, 2228300, 3, 0, 2228301, 3, 0, 2228305, 3, 0, 2228309, 3, 0, 2228311, 3, 0, 2293760, 1, 0, 2293764, 1, 0, 2293768, 1, 0, 2293772, 4, 0, 2293776, 4, 0, 2293780, 4, 0, 2293784, 4, 0, 2293788, 4, 0, 2293792, 4, 0, 2293796, 4, 0, 2293800, 4, 0, 2293804, 4, 0, 2293808, 4, 0, 2293812, 4, 0, 2293816, 4, 0, 2293820, 4, 0, 2293824, 4, 0, 2293828, 4, 0, 2293832, 4, 0, 2293836, 4, 0, 2293840, 4, 0, 2293844, 4, 0, 2293847, 4, 0, 2293850, 2, 0, 2359386, 2, 0, 2555985, 4, 0, 2555989, 4, 0, 2555991, 4, 0 )
+
+[node name="dialog-masa-bolge" type="Area2D" parent="."]
+script = ExtResource( 56 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dialog-masa-bolge"]
+position = Vector2( 864, 352 )
+shape = SubResource( 34 )
+
+[node name="Position2D" type="Position2D" parent="dialog-masa-bolge"]
+position = Vector2( 512, 768 )
+
+[node name="Dialog-masa" parent="." instance=ExtResource( 55 )]
+light_mask = 0
+anchor_bottom = 0.0
+margin_left = 512.0
+margin_top = 704.0
+margin_right = 512.0
+margin_bottom = 704.0
+
+[node name="Dialog-1" parent="." instance=ExtResource( 54 )]
+light_mask = 0
+margin_left = 512.0
+margin_top = 704.0
+margin_right = 512.0
+margin_bottom = 704.0
+
+[node name="Dialog-mumyok" parent="." instance=ExtResource( 57 )]
+light_mask = 0
+margin_left = 512.0
+margin_top = 704.0
+margin_right = 512.0
+margin_bottom = 704.0
+
+[node name="Dialog-aurora" parent="." instance=ExtResource( 58 )]
+light_mask = 0
+margin_left = 1824.0
+margin_top = 704.0
+margin_right = 1824.0
+margin_bottom = 704.0
+
+[node name="Dialog-thanks" parent="." instance=ExtResource( 59 )]
+light_mask = 0
+margin_left = 1824.0
+margin_top = 704.0
+margin_right = 1824.0
+margin_bottom = 704.0
+
+[node name="Dialog-aurorayagit" parent="." instance=ExtResource( 60 )]
+light_mask = 0
+margin_left = 1536.0
+margin_top = 1312.0
+margin_right = 1536.0
+margin_bottom = 1312.0
+
+[node name="dialog-aurorayagit" type="Area2D" parent="."]
+position = Vector2( 2016, 992 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="dialog-aurorayagit"]
+position = Vector2( -64, 0 )
+shape = SubResource( 15 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="dialog-aurorayagit"]
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="dialog-aurorayagit/StaticBody2D"]
+position = Vector2( -32, 32 )
+shape = SubResource( 15 )
+[connection signal="body_entered" from="room-nebula-cam" to="room-nebula-cam" method="_on_roomnebulacam_body_entered"]
+[connection signal="body_entered" from="nebula_kapi" to="Dialog-mumyok" method="_on_nebula_kapi_body_entered"]
+[connection signal="body_entered" from="nebula_kapi" to="nebula_kapi" method="_on_nebulakamera_body_entered"]
+[connection signal="body_exited" from="nebula_kapi" to="nebula_kapi" method="_on_nebulakamera_body_exited"]
+[connection signal="body_entered" from="koridor1-2" to="koridor1-2" method="_on_koridor12_body_entered"]
+[connection signal="body_exited" from="koridor1-2" to="koridor1-2" method="_on_koridor12_body_exited"]
+[connection signal="body_entered" from="aurorakamera" to="aurorakamera" method="_on_aurorakamera_body_entered"]
+[connection signal="body_exited" from="aurorakamera" to="aurorakamera" method="_on_aurorakamera_body_exited"]
+[connection signal="body_exited" from="aurorakamera" to="Dialog-aurora" method="_on_aurorakamera_body_exited"]
+[connection signal="body_entered" from="aurorakamera/auroracam" to="aurorakamera/auroracam" method="_on_auroracam_body_entered"]
+[connection signal="body_entered" from="koridor2-1" to="koridor2-1" method="_on_koridor21_body_entered"]
+[connection signal="body_entered" from="koridor-merdivenTOkor" to="koridor-merdivenTOkor" method="_on_koridormerdivenTOkor_body_entered"]
+[connection signal="dialog_baslat" from="mum-sifonyer" to="Dialog-thanks" method="_on_mumsifonyer_dialog_baslat"]
+[connection signal="yoket" from="mum-sifonyer" to="Nebula-mum" method="_on_mumsifonyer_yoket"]
+[connection signal="yoket" from="mum-sifonyer" to="Nebula" method="_on_mumsifonyer_yoket"]
+[connection signal="body_entered" from="level2" to="level2" method="_on_level2_body_entered"]
+[connection signal="body_entered" from="dialog-masa-bolge" to="Dialog-masa" method="_on_dialogmasabolge_body_entered"]
+[connection signal="body_entered" from="dialog-masa-bolge" to="Dialog-masa" method="_on_dialogmasa_body_entered"]
+[connection signal="hareketlilik" from="Dialog-masa" to="Nebula" method="_on_Dialogmasa_hareketlilik"]
+[connection signal="hareketsizlik" from="Dialog-masa" to="Nebula" method="_on_Dialogmasa_hareketsizlik"]
+[connection signal="hareketlilik" from="Dialog-1" to="Nebula" method="_on_Dialog_hareketlilik"]
+[connection signal="hareketsizlik" from="Dialog-1" to="Nebula" method="_on_Dialog_hareketsizlik"]
+[connection signal="hareketlilik" from="Dialog-mumyok" to="Nebula" method="_on_Dialogmumyok_hareketlilik"]
+[connection signal="hareketlilik" from="Dialog-mumyok" to="Dialog-mumyok" method="_on_Dialogmumyok_hareketlilik"]
+[connection signal="hareketsizlik" from="Dialog-mumyok" to="Nebula" method="_on_Dialogmumyok_hareketsizlik"]
+[connection signal="hareketlilik" from="Dialog-aurora" to="Nebula" method="_on_Dialogaurora_hareketlilik"]
+[connection signal="hareketsizlik" from="Dialog-aurora" to="Nebula" method="_on_Dialogaurora_hareketsizlik"]
+[connection signal="hareketlilik" from="Dialog-aurorayagit" to="Nebula" method="_on_Dialogaurorayagit_hareketlilik"]
+[connection signal="hareketsizlik" from="Dialog-aurorayagit" to="Nebula" method="_on_Dialogaurorayagit_hareketsizlik"]
+[connection signal="body_entered" from="dialog-aurorayagit" to="Dialog-aurorayagit" method="_on_dialogaurorayagit_body_entered"]

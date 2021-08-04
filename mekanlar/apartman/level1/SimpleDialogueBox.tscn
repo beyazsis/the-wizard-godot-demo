@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://nodes/SimpleDialogueBox-Godot-3.0/dialogue_box.png" type="Texture" id=1]
+[ext_resource path="res://nodes/SimpleDialogueBox-Godot-3.0/SimpleDialogueBox.gd" type="Script" id=2]
+
+[node name="SimpleDialogueBox" type="Node2D" index="0"]
+
+position = Vector2( 534.912, 529.13 )
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -244.0
+margin_top = -46.0
+margin_right = 245.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+bbcode_enabled = false
+bbcode_text = ""
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = ""
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+script = ExtResource( 2 )
+_sections_unfolded = [ "custom_colors" ]
+__meta__ = {
+"_edit_lock_": true
+}
+speed = 0.1
+dialogue_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque odio sapien, ut ornare nibh sollicitudin ut. Phasellus mollis felis sed arcu ultrices, at feugiat leo condimentum. Maecenas leo purus, rutrum vel mollis eget, vestibulum consectetur purus. Suspendisse quam sem, elementum ut ante at, elementum finibus risus.;
+Maecenas a arcu turpis. In a gravida nibh. Pellentesque tristique nulla eget magna vulputate, consequat tempus tortor faucibus.;
+Praesent efficitur velit in dolor auctor, sit amet mattis elit ornare. Nullam id nulla ultrices, feugiat quam quis, cursus enim."
+confirm_action = "ui_accept"
+
+
