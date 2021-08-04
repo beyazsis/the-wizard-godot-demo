@@ -1,6 +1,37 @@
-# The Wizard (Halted)
+# The Wizard (Durduruldu) (English translation below)
 
 the-wizard-godot-demo
+
+# Tuşlar
+
+Nebula'ya (Karakter) klavyenizde ki ok tuşları ile yön verebilirsiniz.
+"E" tuşu oyunda genel olarak bir şeyleri aktive etme veya kullanma tuşudur.
+"Enter" ve "Space" tuşları ile dialogları geçebilirsiniz.
+Sizden cevap vermeniz gerektiği zamanalrda sağ ve sol ok tuşları ile dialog kutusu üzerinde bulunan cevapları seçebilirsiniz.
+
+# Ek Notlar
+Aurora'nın odasına girip kutsanmış mum (Blessed candle) almayı unutmayın. Yatağın önünde ki üzerinde mumların olduğu şifonyerin önüne gelip "E" tuşu ile alabilirsiniz.
+
+Undertale benzeri hikaye tabanlı bir rpg oyunudur The Wizard.
+Oyunun genel doku çözünürlüğü 32x32 dir ancak ben 64x64 ve 128x128 gibi 32 nin katları olan boyutları da kullandım.
+Oyunda ki tüm dokuları kendim çizdim Dialog dokuları dahildir. Dialog hazırlarken yardım aldığım şablonların orjinalleri dosyalar içindedir.
+Kendi dialog sistemim ve şablonumu dialog klasörü içinde bulabilirsiniz. Dosyaları biilgisayarınıza inidirip godot'un proje yöneticisinden tüm dosyaları
+içinde barındıran klasörü seçtikten sonra oyunu oynayabilirsiniz. Dokuları LibreSprite ve Pixeloroma kullanarak çizdim. Bu demo 44 script ve yaklaşık 2000 satır kod kullanılmıştır.
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+# The Wizard (Halted) (English)
+
+the-wizard-godot-demo
+
+# Key bindings:
+ You can move Nebula with arrow keys.
+ The key "E" is the activation key for something.
+ Enter and Space key is skipping dialogs
+ You can use left and right arrow keys for making "Yes-No" decisions.
+ 
+ # Notes
+ Don't forget to taking a blessed candle from Aurora. You can take a candle from the table in front of the bed using key of "E"
 
 Undertale like rpg game project developed in Godot Game is 32x32 pixel but I also use 64x64, 128x128 pixel size textures. You can run this game by selecting games root file in Godot's project manager. Textures are created by me by using LibreSprite and Pixeloroma.
 
