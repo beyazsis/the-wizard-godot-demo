@@ -16,7 +16,7 @@ Undertale benzeri hikaye tabanlı bir rpg oyunudur The Wizard.
 Oyunun genel doku çözünürlüğü 32x32 dir ancak ben 64x64 ve 128x128 gibi 32 nin katları olan boyutları da kullandım.
 Oyunda ki tüm dokuları kendim çizdim Dialog dokuları dahildir. Dialog hazırlarken yardım aldığım şablonların orjinalleri dosyalar içindedir.
 Kendi dialog sistemim ve şablonumu dialog klasörü içinde bulabilirsiniz. Dosyaları biilgisayarınıza inidirip godot'un proje yöneticisinden tüm dosyaları
-içinde barındıran klasörü seçtikten sonra oyunu oynayabilirsiniz. Dokuları LibreSprite ve Pixeloroma kullanarak çizdim. Bu demo 44 script ve yaklaşık 2000 satır kod kullanılmıştır.
+içinde barındıran klasörü seçtikten sonra oyunu oynayabilirsiniz. Dokuları LibreSprite ve Pixeloroma kullanarak çizdim. Bu demoda 44 script ve yaklaşık 2000 satır kod kullanılmıştır.
 
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 
